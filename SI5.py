@@ -6,6 +6,8 @@ clock=pygame.time.Clock()
 
 screen = pygame.display.set_mode((400,600))
 
+#Load the images (player, background, enemy) in the game.
+
 #creating objects of game
 player=pygame.Rect(200,500,30,30)
 playerSpeed=20
@@ -24,6 +26,8 @@ bulletState="ready"
         
 while True:    
     screen.fill((0,0,0))
+    #Add code to display the background image.
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -57,7 +61,9 @@ while True:
         pygame.draw.rect(screen,(123,200,100),enemy)
 
         
-    pygame.draw.rect(screen,(225,225,15),bullet)         
+    pygame.draw.rect(screen,(225,225,15),bullet)        
+    
+    #Replace the following line to display player image, instead of a rectangle.
     pygame.draw.rect(screen,(23,100,100),player)
     
        
